@@ -1,25 +1,23 @@
 import ScheduleSelector from 'react-schedule-selector'
+import { useState, useEffect } from "react";
+export const Scheduler = () => { 
 
-export const Scheduler = () => {
-        
-    state = { schedule = [] }
-
-    handleChange = newSchedule => {
-        this.setState({ schedule: newSchedule })
+    // state = { schedule = [] }
+    const [Schedule, setSchedule] = useState([]);
+    const handleChange = newSchedule => {
+    setSchedule(newSchedule)
     }
 
 
     return (
         <ScheduleSelector
-        selection={this.state.schedule}
-        numDays={5}
-        minTime={8}
-        maxTime={22}
-        hourlyChunks={2}
-        onChange={this.handleChange}
+            selection={Schedule}
+            numDays={5}
+            minTime={8}
+            maxTime={22}
+            hourlyChunks={2}
+            onChange={handleChange}
         />
     )
-
 }
-
-export default ScheduleSelector;
+export default Scheduler
