@@ -11,7 +11,7 @@ export const NameForm = () => {
     event.preventDefault();
     const link = "/schedule/"+name;
     console.log(link);
-    navigate("/schedule");
+    navigate(link);
   }
 
   return (

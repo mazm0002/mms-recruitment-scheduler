@@ -6,12 +6,11 @@ import { Route, Routes } from "react-router-dom"
 
 function App() { 
   return (
-  // <Routes>
-  //   <Route path="/" element={<Scheduler />}/>
-  //   <Route path="/mms-recruitment-scheduler" element={<NameForm />}/>
-  //   <Route path="/schedule" element={<Scheduler />}/>
-  // </Routes>
-  <Scheduler />
+  <Routes>
+    <Route path="/" element={<Scheduler />}/>
+    <Route path="/mms-recruitment-scheduler" element={<NameForm />}/>
+    <Route exact path="/schedule/:name" element={<Scheduler />}/>
+  </Routes>
   );
 }
 
